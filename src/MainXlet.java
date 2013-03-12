@@ -1,4 +1,4 @@
-package br.com.globalcode.ginga;
+
 
 import java.awt.Color;
 import java.io.IOException;
@@ -78,9 +78,6 @@ public class MainXlet implements Xlet {
 		btnStyle.setBgColor(new Color(192, 222, 237));
 		btnStyle.setBgTransparency(200);
 		btnStyle.setBorder(Border.createEmpty());
-		btnStyle.setFgSelectionColor(Color.BLUE);
-		btnStyle.setFont(Font.createSystemFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, Font.SIZE_SMALL));
-		btnStyle.setBgSelectionColor(Color.BLUE);
 		
 		final Timeline timeLine = new Timeline();
 
@@ -133,10 +130,10 @@ public class MainXlet implements Xlet {
 
 	private void buscarTweets(final Form f, final Button btn,
 			final Timeline timeLine) {
-		btn.setText("Atualizar tweets");
+		btn.setText("Atualizar");
 		System.out.println("**** DEBUG -- readingSearchedTweets");
 		java.util.List generatedTweets = new ArrayList();
-		Parser parser= ParserFactory.createParser(ParserFactory.PARSER_PROGRAMA);
+		Parser parser=ParserFactory.createParser(ParserFactory.PARSER_PROGRAMA);
 		try {
 			generatedTweets = parser.parse("gingajava");
 		} catch (IOException e) {

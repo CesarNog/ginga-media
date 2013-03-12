@@ -31,7 +31,7 @@ public class URLFetcher {
 		HttpURLConnection connection = (HttpURLConnection) urlAddress
 				.openConnection();
 		connection.setRequestMethod("GET");
-
+		HttpURLConnection.setFollowRedirects(true);
 		connection.connect();
 		return connection.getInputStream();
 	}

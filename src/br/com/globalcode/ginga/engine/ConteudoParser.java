@@ -31,7 +31,11 @@ private static final String URL_BASE="http://otaviojava.com.br/ginga-media-serve
  */
 public abstract String getResource();
 
+<<<<<<< HEAD
 private static final int TAMANHO_MINIMO=4;
+=======
+private static final int TAMANHO_MINIMO=5;
+>>>>>>> 46371ddbee4bcdbcc31abac6882d5bf589c5bb6b
 public List parse(String queryString) throws IOException, JSONException {
 	return parse(queryString, TAMANHO_MINIMO);
 }
@@ -57,8 +61,13 @@ public List parse(String queryString) throws IOException, JSONException {
 			urlString.append("?quantidade=");
 			urlString.append(tamanho);
 		}
+<<<<<<< HEAD
 		String resposta = new String(URLFetcher.getURLContent(urlString.toString()).getBytes(), "UTF-8");
 		
+=======
+		String resposta = URLFetcher.getURLContent(urlString.toString());
+
+>>>>>>> 46371ddbee4bcdbcc31abac6882d5bf589c5bb6b
 		List conteudos = new ArrayList();
 
 		// Realiza o parse do JSON

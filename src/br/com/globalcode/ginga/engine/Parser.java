@@ -9,4 +9,8 @@ public interface Parser {
 
 	 List parse(String queryString) throws IOException, JSONException;
 	 List parse(String queryString, int tamanho) throws IOException, JSONException;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 46371ddbee4bcdbcc31abac6882d5bf589c5bb6b
